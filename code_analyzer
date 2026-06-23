@@ -1,0 +1,75 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Career Skill Database
+career_skills = {
+    "Data Analyst": ["Python", "SQL", "Excel", "Power BI", "Statistics"],
+    "Data Scientist": ["Python", "SQL", "Machine Learning", "Statistics", "Pandas"],
+    "Software Developer": ["Python", "Java", "DSA", "Git", "Problem Solving"],
+    "Web Developer": ["HTML", "CSS", "JavaScript", "React", "Git"],
+    "Business Analyst": ["Excel", "SQL", "Power BI", "Communication", "Statistics"]
+}
+
+# Display careers
+print("Available Career Roles:")
+for role in career_skills:
+    print("-", role)
+
+# User selects career
+career = input("\nEnter your target career: ")
+
+if career not in career_skills:
+    print("Career not found!")
+    exit()
+
+# User enters skills
+user_skills = input(
+    "\nEnter your skills separated by commas:\n"
+    "(Example: Python, SQL, Excel)\n"
+).split(",")
+
+user_skills = [skill.strip() for skill in user_skills]
+
+required_skills = career_skills[career]
+
+# Find matching skills
+matched_skills = []
+missing_skills = []
+
+for skill in required_skills:
+    if skill in user_skills:
+        matched_skills.append(skill)
+    else:
+        missing_skills.append(skill)
+
+# Readiness Score
+score = (len(matched_skills) / len(required_skills)) * 100
+
+# Results
+print("\n========== SKILLBRIDGE REPORT ==========")
+print("Target Career:", career)
+print("Required Skills:", required_skills)
+print("Your Skills:", user_skills)
+
+print("\nSkills You Have:")
+for skill in matched_skills:
+    print("✓", skill)
+
+print("\nSkills Missing:")
+for skill in missing_skills:
+    print("✗", skill)
+
+print(f"\nReadiness Score: {score:.2f}%")
+
+# Recommendation
+print("\nLearning Recommendations:")
+for skill in missing_skills:
+    print(f"- Learn {skill}")
+
+# Visualization
+labels = ["Completed", "Missing"]
+values = [len(matched_skills), len(missing_skills)]
+
+plt.pie(values, labels=labels, autopct='%1.1f%%')
+plt.title("Skill Readiness Analysis")
+plt.show()
