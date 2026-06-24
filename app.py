@@ -127,4 +127,4 @@ if st.button("Analyze Skills"):
 # -------------------------------
 
 st.markdown("---")
-st.caption("Developed using Python, Pandas, Matplotlib and Streamlit")
+st.caption("Developed using Streamlit")
