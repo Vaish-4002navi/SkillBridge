@@ -7,19 +7,84 @@ import matplotlib.pyplot as plt
 # -------------------------------
 
 career_skills = {
-    "Data Analyst": ["Python", "SQL", "Excel", "Power BI", "Statistics"],
-    "Data Scientist": ["Python", "SQL", "Machine Learning", "Statistics", "Pandas"],
-    "Software Developer": ["Python", "Java", "DSA", "Git", "Problem Solving"],
-    "Web Developer": ["HTML", "CSS", "JavaScript", "React", "Git"],
-    "Business Analyst": ["Excel", "SQL", "Power BI", "Communication", "Statistics"]
+   "Data Analyst": ["Python", "SQL", "Excel", "Power BI", "Tableau"],
+    "Data Scientist": ["Python", "SQL", "ML Libraries", "Pandas", "PyTorch", "Scikit-Learn", "TensorFlow", "Snowflake", "Apache Spark"],
+    "Software Developer": ["Python", "Java", "C++", "C#", "Go", "Git", "Docker", "Kubernetes", "CI/CD"],
+    "Web Developer": ["HTML", "CSS", "JavaScript", "React", "Node.js", "Angular", "Git", "REST APIs"],
+    "Business Analyst": ["Excel", "SQL", "Power BI", "Jira", "Confluence", "Microsoft Visio", "Miro"],
+    "Data Engineer": ["Python", "SQL", "Java", "Scala", "Apache Spark", "Airflow", "dbt", "Snowflake", "BigQuery"],
+    "DevOps Engineer": ["Bash", "Python", "Go", "YAML", "AWS/Azure/GCP", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "CI/CD"],
+    "Cybersecurity Analyst": ["Python", "Bash", "PowerShell", "Wireshark", "Splunk", "Kali Linux", "Firewalls", "Metasploit"],
+    "Product Manager": ["Jira", "Productboard", "Confluence", "Amplitude", "Miro"],
+    "UX/UI Designer": ["HTML/CSS Basics", "Figma", "Adobe XD", "Sketch", "InVision"],
+    "QA Automation Engineer": ["Python", "Java", "JavaScript", "Selenium", "Cypress", "Playwright", "Postman", "Jenkins"],
+    "AI / ML Engineer": ["Python", "C++", "PyTorch", "TensorFlow", "MLflow", "Docker", "CUDA"]
 }
 
-all_skills = [
-    "Python", "SQL", "Excel", "Power BI", "Statistics",
-    "Machine Learning", "Pandas", "Java", "DSA", "Git",
-    "Problem Solving", "HTML", "CSS", "JavaScript",
-    "React", "Communication"
-]
+skill_categories = {
+    "💻 Programming Languages": [
+        "Python", "Java", "C++", "C#", "Go", "JavaScript",
+        "SQL", "Scala", "Bash", "PowerShell"
+    ],
+
+    "📊 Data & Analytics": [
+        "Excel", "Power BI", "Tableau",
+        "Pandas", "Apache Spark",
+        "Snowflake", "BigQuery", "dbt"
+    ],
+
+    "🤖 AI / Machine Learning": [
+        "ML Libraries", "PyTorch",
+        "TensorFlow", "Scikit-Learn",
+        "MLflow", "CUDA"
+    ],
+
+    "🌐 Web Development": [
+        "HTML", "CSS",
+        "React", "Node.js",
+        "Angular", "REST APIs"
+    ],
+
+    "☁️ Cloud & DevOps": [
+        "Docker", "Kubernetes",
+        "Terraform", "GitHub Actions",
+        "AWS/Azure/GCP", "CI/CD",
+        "Airflow", "YAML"
+    ],
+
+    "🛡 Cybersecurity": [
+        "Wireshark", "Splunk",
+        "Kali Linux", "Firewalls",
+        "Metasploit"
+    ],
+
+    "🧪 Testing": [
+        "Selenium",
+        "Cypress",
+        "Playwright",
+        "Postman",
+        "Jenkins"
+    ],
+
+    "🎨 UI / UX Design": [
+        "HTML/CSS Basics",
+        "Figma",
+        "Adobe XD",
+        "Sketch",
+        "InVision"
+    ],
+
+    "📋 Project Management": [
+        "Jira",
+        "Confluence",
+        "Miro",
+        "Productboard",
+        "Amplitude",
+        "Microsoft Visio"
+    ]
+}
+
+
 
 # -------------------------------
 # Page Settings
@@ -49,10 +114,21 @@ career = st.selectbox(
     list(career_skills.keys())
 )
 
-skills = st.multiselect(
-    "Select Your Current Skills",
-    all_skills
-)
+st.subheader("🛠 Select Your Current Skills")
+
+skills = []
+
+for category, category_skills in skill_categories.items():
+    with st.expander(category):
+        selected = st.multiselect(
+            "Choose skills",
+            category_skills,
+            key=category
+        )
+        skills.extend(selected)
+
+
+
 
 # -------------------------------
 # Analyze Button
