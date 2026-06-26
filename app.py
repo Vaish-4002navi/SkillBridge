@@ -203,4 +203,4 @@ if st.button("Analyze Skills"):
 # -------------------------------
 
 st.markdown("---")
-st.caption("Developed using Streamlit")
+st.caption("Developed by Vaishnavi.T | github:[Vaish-4002navi](https://github.com/Vaish-4002navi)")
