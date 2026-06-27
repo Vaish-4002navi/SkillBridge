@@ -1,0 +1,13 @@
+Career Role,Required Skills
+"Data Analyst","Python, SQL, Excel, Power BI, Tableau"
+"Data Scientist","Python, SQL, ML Libraries, Pandas, PyTorch, Scikit-Learn, TensorFlow, Snowflake, Apache Spark"
+"Software Developer","Python, Java, C++, C#, Go, Git, Docker, Kubernetes, CI/CD"
+"Web Developer","HTML, CSS, JavaScript, React, Node.js, Angular, Git, REST APIs"
+"Business Analyst","Excel, SQL, Power BI, Jira, Confluence, Microsoft Visio, Miro"
+"Data Engineer","Python, SQL, Java, Scala, Apache Spark, Airflow, dbt, Snowflake, BigQuery"
+"DevOps Engineer","Bash, Python, Go, YAML, AWS/Azure/GCP, Docker, Kubernetes, Terraform, GitHub Actions, CI/CD"
+"Cybersecurity Analyst","Python, Bash, PowerShell, Wireshark, Splunk, Kali Linux, Firewalls, Metasploit"
+"Product Manager","Jira, Productboard, Confluence, Amplitude, Miro"
+"UX/UI Designer","HTML/CSS Basics, Figma, Adobe XD, Sketch, InVision"
+"QA Automation Engineer","Python, Java, JavaScript, Selenium, Cypress, Playwright, Postman, Jenkins"
+"AI / ML Engineer","Python, C++, PyTorch, TensorFlow, MLflow, Docker, CUDA"

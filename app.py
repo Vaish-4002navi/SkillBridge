@@ -21,67 +21,16 @@ career_skills = {
     "AI / ML Engineer": ["Python", "C++", "PyTorch", "TensorFlow", "MLflow", "Docker", "CUDA"]
 }
 
-skill_categories = {
-    "💻 Programming Languages": [
-        "Python", "Java", "C++", "C#", "Go", "JavaScript",
-        "SQL", "Scala", "Bash", "PowerShell"
-    ],
-
-    "📊 Data & Analytics": [
-        "Excel", "Power BI", "Tableau",
-        "Pandas", "Apache Spark",
-        "Snowflake", "BigQuery", "dbt"
-    ],
-
-    "🤖 AI / Machine Learning": [
-        "ML Libraries", "PyTorch",
-        "TensorFlow", "Scikit-Learn",
-        "MLflow", "CUDA"
-    ],
-
-    "🌐 Web Development": [
-        "HTML", "CSS",
-        "React", "Node.js",
-        "Angular", "REST APIs"
-    ],
-
-    "☁️ Cloud & DevOps": [
-        "Docker", "Kubernetes",
-        "Terraform", "GitHub Actions",
-        "AWS/Azure/GCP", "CI/CD",
-        "Airflow", "YAML"
-    ],
-
-    "🛡 Cybersecurity": [
-        "Wireshark", "Splunk",
-        "Kali Linux", "Firewalls",
-        "Metasploit"
-    ],
-
-    "🧪 Testing": [
-        "Selenium",
-        "Cypress",
-        "Playwright",
-        "Postman",
-        "Jenkins"
-    ],
-
-    "🎨 UI / UX Design": [
-        "HTML/CSS Basics",
-        "Figma",
-        "Adobe XD",
-        "Sketch",
-        "InVision"
-    ],
-
-    "📋 Project Management": [
-        "Jira",
-        "Confluence",
-        "Miro",
-        "Productboard",
-        "Amplitude",
-        "Microsoft Visio"
-    ]
+skill_categories ={
+    "💻 Programming Languages": ["none","Python", "Java", "C++", "C#", "Go", "JavaScript", "SQL", "Scala", "Bash", "PowerShell","Other"],
+    "📊 Data & Analytics": ["none","Excel", "Power BI", "Tableau", "Pandas", "Apache Spark", "Snowflake", "BigQuery", "dbt","Other"],
+    "🤖 AI / Machine Learning": ["none","ML Libraries", "PyTorch", "TensorFlow", "Scikit-Learn", "MLflow", "CUDA","Other"],
+    "🌐 Web Development": ["none","HTML", "CSS", "React", "Node.js", "Angular", "REST APIs","Other"],
+    "☁️ Cloud & DevOps": ["none","Docker", "Kubernetes", "Terraform", "GitHub Actions", "AWS/Azure/GCP", "CI/CD", "Airflow", "YAML","Other"],
+    "🛡 Cybersecurity": ["none","Wireshark", "Splunk", "Kali Linux", "Firewalls", "Metasploit","Other"],
+    "🧪 Testing": ["none","Selenium", "Cypress", "Playwright", "Postman", "Jenkins","Other"],
+    "🎨 UI / UX Design": ["none","HTML/CSS Basics", "Figma", "Adobe XD", "Sketch", "InVision","Other"],
+    "📋 Project Management": ["none","Jira", "Confluence", "Miro", "Productboard", "Amplitude", "Microsoft Visio","Other"]
 }
 
 
